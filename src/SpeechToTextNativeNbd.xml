@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.speechtotextnativenbd.SpeechToTextNativeNbd" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Speech To Text Native Nbd</name>
+    <description>Speech To Text for Native Mobile</description>
+    <icon/>
+    <properties>
+
+         <propertyGroup caption="Parameters">
+
+            <propertyGroup caption="Inputs">
+                <property key="InputLanguage" type="attribute">
+                    <caption>InputLanguage</caption>
+                    <description/>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+                </property>
+            </propertyGroup>    
+
+
+           <propertyGroup caption="Result">
+                <property key="SessionStatus" type="attribute">
+                    <caption>SessionStatus</caption>
+                    <description/>
+                    <attributeTypes>
+                        <attributeType name="Enum"/>
+                    </attributeTypes>
+                </property>
+                <property key="SpeechPartialResults" type="attribute">
+                    <caption>SpeechPartialResults</caption>
+                    <description/>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+                </property>
+                <property key="RawResult" type="attribute">
+                    <caption>RawResult</caption>
+                    <description/>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+                </property>
+            </propertyGroup>    
+         </propertyGroup>    
+
+
+        <propertyGroup caption="Events">
+            <property key="onVoiceResultAction" type="action" required="true">
+                <caption>onVoiceResult</caption>
+                <description/>
+            </property>
+            <property key="onSpeechErrorAction" type="action" required="true">
+                <caption>onSpeechError</caption>
+                <description/>
+            </property>
+        </propertyGroup>    
+
+        <propertyGroup caption="Permissions">
+                <property key="PermissionWarning" type="string" multiline="false" defaultValue="This is a warning, read description below.">
+                    <caption>Warning</caption>
+                <description>The 'Make it native' app can't work. You have to build your custom app with the correct permissions. 
+                Android : 'RECORD_AUDIO', 
+                iOS : 'SpeechRecognition'</description>
+                </property>
+        </propertyGroup>    
+
+
+            <!--
+ 
+            -->
+
+    </properties>
+</widget>
